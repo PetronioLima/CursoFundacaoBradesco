@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+
+    <a href="index.html">index.html</index></a>
+    <h3>Armazenamento de dados JS</h3>
+<!--
+    <script language="javascript">
+        /* objetivo 
+            captura de dados */
+        /* definição de variaveis */
+        var nome;
+        /* entrada de dados */
+        nome = window.prompt('Digite seu nome:')
+        /* saida de dados */
+        document.write('olá, ' + nome + ' você está aprendendo JS')
+    </script>
+-->
+    <h3>concatenar campos</h3>
+    <form action="" name="formConcatena" method="post">
+        nome.......: <input type="text" name="fnome"><br>
+        sobrenome..: <input type="text" name="fsobrenome"><br>
+        <input type="button" onclick="concatena()" name="btnConcatena" value="Concatenar">
+        <input type="button" value="Cancelar" name="btnCancelar">
+    </form>
+
+    <script language="javascript">
+        var nome;
+        var sobrenome;
+        var nomeCompleto;
+
+        function concatena() {
+            nome = document.formConcatena.fnome.value.toUpperCase();
+            sobrenome = document.formConcatena.fsobrenome.value.toUpperCase();
+            nomeCompleto = nome + ' ' + sobrenome;
+            window.alert(nomeCompleto);
+        }
+    </script>
+
+    <h3>Calculo de valores</h3>
+    <form action="" name="formCalcular" method="post">
+        PrimeiroValor: <input type="text" name="fpValor"><br>
+        SegundoValor: <input type="text" name="fsValor"><br>
+        <input type="button" value="Calcular" onclick="calcula()" name="calcular">
+    </form>
+
+    <script language="javascript">
+        var pValor;
+        var sValor;
+        var soma;
+
+        function calcula() {
+            pValor = document.formCalcular.fpValor.value;
+            sValor = document.formCalcular.fsValor.value;
+            soma = parseFloat(pValor) + parseFloat(sValor);
+            window.alert('resultado: ' + soma);
+        }
+    </script>
+
+</body>
+</html>
