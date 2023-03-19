@@ -11,16 +11,70 @@
     <a href="index.html">Index.html</a>
 
     <!-- Condições JavaScript -->
+    <!--
     <script>
 
         notaBim = window.prompt('Nota do Bimestre: ');
         notaRec = window.prompt('Nota da Recuperação: ');
-        notaMedia = (notaBim + notaMedia) / 2;
+        notaMedia = (parseFloat(notaBim) + parseFloat(notaRec)) / 2;
 
         if (notaRec > notaBim) {
             document.write('Média após recuperação: ' + notaMedia);
         } else {
             document.write('Média após recuperação: ' + notaBim);
+        }
+
+    </script>
+    -->
+
+    <!--
+    <script>
+        valor1 = window.prompt('Valor 1: ');
+        valor2 = window.prompt('Valor 2: ');
+        valor3 = '';
+
+        if (valor1 > valor2) {
+            valor3 = valor1;
+            document.write('valor1: ' + valor1);
+        } else {
+            document.write('valor1: ' + parseInt(valor1), ' |valor2: ' + parseInt(valor2));
+        }
+
+    </script>
+    -->
+
+    <!--
+    <script>
+        salario = window.prompt('salario: ');
+
+        if (salario > 2000 ) {
+            document.write('vai pagar imposto');
+        } else {
+            if (salario > 1500) {
+                document.write('vai apertar');
+            } else {
+                if (salario > 1000) {
+                    document.write('vish');
+                } else {
+                    document.write('faz o L');
+                }
+            }
+        }
+
+    </script>
+    -->
+    
+    <script>
+        opcao = window.prompt('opcao');
+
+        switch (opcao) {
+            case 1: document.write('case 1');
+            break;
+            case 2: document.write('case 2');
+            break;
+            case 3: document.write('case 3');
+            break;
+            default: document.write(opcao)
         }
 
     </script>
