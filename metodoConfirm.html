@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--
+    <script>
+        
+        var metodo;
+        metodo = window.confirm('Selecione um botão');
+
+        if (metodo == true) {
+            document.write('Ok selecionado');
+        } else {
+            document.write('Cancelar selecionado');
+        }
+    </script>
+ -->   
+
+    <h1>Formulário de Consulta - toUpperCase()</h1>
+    <p>
+        <form action="" method="post" name="formcurso">
+            Digite seu curso: <input type="text" name="f_cursodig" size="8" maxlength="4"> (SIST) <p></p>
+            <input type="button" value="Validar" name="validar" onclick="cadcurso()">
+            <input type="reset" name="btnCancelar"><p></p>
+            Código do curso: <input type="text" name="f_codcurso" size="15" maxlength="10">
+        </form>
+    </p>
+
+    <script>
+        var js_cursodig;
+
+        function cadcurso() {
+            js_cursodig = document.formcurso.f_cursodig.value;
+            if (js_cursodig.toUpperCase() == 'SIST') {
+                document.formcurso.f_codcurso.value = 'SIST001/FB';
+            } else {
+                window.alert('Curso inválido');
+            }
+        }
+    </script>
+
+<h1>Formulário de Consulta - toLowerCase()</h1>
+<p>
+    <form action="" method="post" name="formcurso2">
+        Digite seu curso: <input type="text" name="f_cursodig2" size="8" maxlength="4"> (SIST) <p></p>
+        <input type="button" value="Validar" name="validar" onclick="cadcurso2()">
+        <input type="reset" name="btnCancelar2"><p></p>
+        Código do curso: <input type="text" name="f_codcurso2" size="15" maxlength="10">
+    </form>
+</p>
+
+<script>
+    var js_cursodig2;
+
+    function cadcurso2() {
+        js_cursodig2 = document.formcurso2.f_cursodig2.value;
+        if (js_cursodig2.toLowerCase() == 'sist') {
+            document.formcurso2.f_codcurso2.value = 'sist/fb';
+        } else {
+            window.alert('Curso inválido 2');
+        }
+    }
+</script>
+
+</body>
+</html>
